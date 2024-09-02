@@ -1,0 +1,95 @@
+@import url(_font.css);
+@import url(_reset.css);
+
+:root {
+    /* fonts */
+    --font-weight: 400;
+    --font-stretch: 100%;
+
+    /* colors */
+    --clr-green: hsl(75, 94%, 57%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-700: hsl(0, 0%, 20%);
+    --clr-grey-800: hsl(0, 0%, 12%);
+    --clr-grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    font-family: "Inter", sans-serif;
+    font-variation-settings: "wght" var(--font-weight), "wdth" var(--font-stretch);
+
+    background: var(--clr-grey-900);
+    color: var(--clr-white);
+    overflow: scroll;
+}
+
+p {
+    font-size: 14px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: clamp(375px, 40vw, 450px);
+    background: var(--clr-grey-800);
+    border-radius: 2rem;
+    padding: 3rem;
+
+    img {
+        border-radius: 50%;
+        width: 30%;
+        transition: transform 500ms ease-in-out;
+
+        &:hover, :focus {
+            transform: scale(1.5);
+        }
+    }
+
+    h2 {
+        margin: 0;
+        padding-block: 2rem 0.5rem;
+    }
+    .location {
+        color: var(--clr-green);
+        font-weight: 600;
+        margin: 0;
+        padding-block: 0rem 1rem;
+    }
+
+    a {
+        width: 100%;
+        text-align: center;
+        margin-block: 0.5rem;
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+        background: var(--clr-grey-700);
+        color: var(--clr-white);
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 500ms ease;
+
+        &:hover, :focus {
+            color: var(--clr-grey-900);
+            background: var(--clr-green);
+        }
+    }
+
+    p {
+        padding: 1rem;
+        margin: 0;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-block: .2rem;
+
+    a {
+        color: var(--clr-green);
+    }
+}
